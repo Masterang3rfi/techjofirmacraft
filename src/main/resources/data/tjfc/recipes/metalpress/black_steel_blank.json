@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/blank",
+  "input": {
+    "tag": "forge:ingots/black_steel"
+  },
+  "result": {
+    "item": "tfc:metal/blank/black_steel",
+    "count": 1
+  },
+  "energy": 2400
+}

@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/sword",
+  "input": {
+    "tag": "forge:ingots/wrought_iron"
+  },
+  "result": {
+    "item": "tfc:metal/sword_head/wrought_iron",
+    "count": 1
+  },
+  "energy": 2400
+}

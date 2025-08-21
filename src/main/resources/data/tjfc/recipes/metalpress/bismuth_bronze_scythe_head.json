@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/scythe",
+  "input": {
+    "tag": "forge:ingots/bismuth_bronze"
+  },
+  "result": {
+    "item": "tfc:metal/scythe_head/bismuth_bronze",
+    "count": 1
+  },
+  "energy": 2400
+}

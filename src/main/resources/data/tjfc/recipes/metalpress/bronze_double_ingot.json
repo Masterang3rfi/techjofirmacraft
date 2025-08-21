@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/double_ingot",
+  "input": {
+    "tag": "forge:ingots/bronze"
+  },
+  "result": {
+    "item": "tfc:metal/double_ingot/bronze",
+    "count": 1
+  },
+  "energy": 2400
+}

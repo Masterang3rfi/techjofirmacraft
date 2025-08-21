@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/knife",
+  "input": {
+    "tag": "forge:ingots/copper"
+  },
+  "result": {
+    "item": "tfc:metal/knife_head/copper",
+    "count": 1
+  },
+  "energy": 2400
+}

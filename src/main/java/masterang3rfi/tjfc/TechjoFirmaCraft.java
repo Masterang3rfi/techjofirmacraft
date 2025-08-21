@@ -68,7 +68,7 @@ public class TechjoFirmaCraft
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        TJFCItems.MOLDS.register(modEventBus);
+        TJFCItems.ITEMS.register(modEventBus);
 
 
 
