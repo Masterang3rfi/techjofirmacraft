@@ -18,11 +18,11 @@ license="${mod_license}"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
-modId="techjofirmacraft" #mandatory
+modId="tjfc" #mandatory
 # The version number of the mod
 version="1.20-1.0.0.0" #mandatory
 # A display name for the mod
-displayName="techjofirmacraft" #mandatory
+displayName="TechjoFirmaCraft" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
@@ -42,7 +42,7 @@ authors="Masterang3rfi" #optional
 #displayTest="MATCH_VERSION" # if nothing is specified, MATCH_VERSION is the default when clientSideOnly=false, otherwise IGNORE_ALL_VERSION when clientSideOnly=true (#optional)
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''Glue Mod for Techjofirmacraft modpack'''
+description='''Glue Mod for TechjoFirmaCraft modpack'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.${mod_id}]] #optional
     # the modid of the dependency
