@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/blank",
+  "input": {
+    "item": "tfc:metal/sword_blade/steel"
+  },
+  "result": {
+    "item": "tjfc:mold/sword",
+    "count": 1
+  },
+  "energy": 2400
+}

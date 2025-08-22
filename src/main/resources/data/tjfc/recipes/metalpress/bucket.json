@@ -1,0 +1,15 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/bucket",
+  "input": {
+    "base_ingredient": {
+      "tag": "forge:ingots/steel"
+    },
+    "count": 5
+  },
+  "result": {
+    "item": "minecraft:bucket",
+    "count": 1
+  },
+  "energy": 2400
+}

@@ -2,7 +2,10 @@
   "type": "immersiveengineering:metal_press",
   "mold": "tjfc:mold/mace",
   "input": {
-    "tag": "forge:ingots/wrought_iron"
+    "base_ingredient": {
+      "tag": "forge:ingots/wrought_iron"
+    },
+    "count": 2
   },
   "result": {
     "item": "tfc:metal/mace_head/wrought_iron",

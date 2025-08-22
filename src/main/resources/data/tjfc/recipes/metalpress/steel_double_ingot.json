@@ -2,7 +2,10 @@
   "type": "immersiveengineering:metal_press",
   "mold": "tjfc:mold/double_ingot",
   "input": {
-    "tag": "forge:ingots/steel"
+    "base_ingredient": {
+      "tag": "forge:ingots/steel"
+    },
+    "count": 2
   },
   "result": {
     "item": "tfc:metal/double_ingot/steel",

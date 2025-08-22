@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/blank",
+  "input": {
+    "item": "minecraft:bucket"
+  },
+  "result": {
+    "item": "tjfc:mold/bucket",
+    "count": 1
+  },
+  "energy": 2400
+}

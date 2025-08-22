@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "immersiveengineering:storage_steel",
+  "input": {
+    "item": "forge:sheets/steel"
+  },
+  "result": {
+    "item": "tjfc:mold/blank",
+    "count": 1
+  },
+  "energy": 2400
+}

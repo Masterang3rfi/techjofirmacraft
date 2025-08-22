@@ -1,6 +1,7 @@
 {
   "item.tjfc.mold.blank": "Metal Press Mold: Blank",
   "item.tjfc.mold.bucket": "Metal Press Mold: Bucket",
+  "item.tjfc.mold.block": "Metal Press Mold: Block",
   "item.tjfc.mold.double_ingot": "Metal Press Mold: Double Ingot",
   "item.tjfc.mold.axe": "Metal Press Mold: Axe Head",
   "item.tjfc.mold.chisel": "Metal Press Mold: Chisel Head",
@@ -10,10 +11,12 @@
   "item.tjfc.mold.knife": "Metal Press Mold: Knife Head",
   "item.tjfc.mold.mace": "Metal Press Mold: Mace Head",
   "item.tjfc.mold.pickaxe": "Metal Press Mold: Pickaxe Head",
-  "item.tjfc.mold.prospector_pick": "Metal Press Mold: Prospector's Pick Head",
+  "item.tjfc.mold.propick": "Metal Press Mold: Prospector's Pick Head",
   "item.tjfc.mold.saw": "Metal Press Mold: Saw Head",
   "item.tjfc.mold.scythe": "Metal Press Mold: Scythe Head",
   "item.tjfc.mold.shovel": "Metal Press Mold: Shovel Head",
   "item.tjfc.mold.sword": "Metal Press Mold: Sword Blade",
-  "creativetab.tjfc.molds": "TJFC Molds"
+
+  "creativetab.tjfc.molds": "TJFC Molds",
+  "item.minecraft.bucket": "Ultimate Bucket"
 }

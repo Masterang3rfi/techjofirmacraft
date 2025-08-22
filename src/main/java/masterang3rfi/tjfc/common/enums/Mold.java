@@ -3,6 +3,7 @@ package masterang3rfi.tjfc.common.enums;
 public enum Mold {
     AXE,
     BLANK,
+    BLOCK,
     BUCKET,
     CHISEL,
     DOUBLE_INGOT,
@@ -12,7 +13,7 @@ public enum Mold {
     KNIFE,
     MACE,
     PICKAXE,
-    PROSPECTOR_PICK,
+    PROPICK,
     SAW,
     SCYTHE,
     SHOVEL,

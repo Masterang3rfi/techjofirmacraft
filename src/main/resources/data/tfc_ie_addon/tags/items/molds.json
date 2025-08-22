@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "tjfc:mold_blank",
-    "tjfc:mold_bucket",
-    "tjfc:mold_double_ingot",
-    "tjfc:mold_axe",
-    "tjfc:mold_chisel",
-    "tjfc:mold_hammer",
-    "tjfc:mold_hoe",
-    "tjfc:mold_javelin",
-    "tjfc:mold_knife",
-    "tjfc:mold_mace",
-    "tjfc:mold_pickaxe",
-    "tjfc:mold_prospector_pick",
-    "tjfc:mold_saw",
-    "tjfc:mold_scythe",
-    "tjfc:mold_shovel",
-    "tjfc:mold_sword"
+    "tjfc:mold/blank",
+    "tjfc:mold/bucket",
+    "tjfc:mold/double_ingot",
+    "tjfc:mold/axe",
+    "tjfc:mold/chisel",
+    "tjfc:mold/hammer",
+    "tjfc:mold/hoe",
+    "tjfc:mold/javelin",
+    "tjfc:mold/knife",
+    "tjfc:mold/mace",
+    "tjfc:mold/pickaxe",
+    "tjfc:mold/propick",
+    "tjfc:mold/saw",
+    "tjfc:mold/scythe",
+    "tjfc:mold/shovel",
+    "tjfc:mold/sword"
   ]
 }

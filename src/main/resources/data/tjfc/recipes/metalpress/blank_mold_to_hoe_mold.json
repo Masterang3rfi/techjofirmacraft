@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/blank",
+  "input": {
+    "item": "tfc:metal/hoe_head/steel"
+  },
+  "result": {
+    "item": "tjfc:mold/hoe",
+    "count": 1
+  },
+  "energy": 2400
+}
