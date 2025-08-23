@@ -22,11 +22,11 @@ public final class TJFCItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final EnumMap<TJFCMold,RegistryObject<Item>> MOLDS;
-    public static final Map<Metal.Default, Map<Metal.ItemType, RegistryObject<Item>>> METAL_ITEMS;
+    public static final EnumMap<TJFCMetal.Default, EnumMap<TJFCMetal.ItemType, RegistryObject<Item>>> METAL_ITEMS;
 
 
     static {
-        METAL_ITEMS = Helpers.mapOfKeys(TJFCMetal.Default.class, TJFCMetal.Default::hasParts, (metal) -> registerBasic("metal/scrap/" + metal.name().toLowerCase()));
+        METAL_ITEMS = Helpers.mapOfKeys(TJFCMetal.Default.class, (metal) -> Helpers.mapOfKeys(TJFCMetal.ItemType.class, (itemType -> registerBasic("metal/" + itemType.name().toLowerCase() +"/"+ metal.name().toLowerCase()))));
         MOLDS = Helpers.mapOfKeys(TJFCMold.class,(TJFCMold) -> registerBasicWithStackSize("mold/" + TJFCMold.name().toLowerCase(),1));
     }
 

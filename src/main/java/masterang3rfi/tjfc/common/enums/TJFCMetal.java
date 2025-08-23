@@ -2,8 +2,12 @@ package masterang3rfi.tjfc.common.enums;
 
 
 import net.dries007.tfc.util.Metal;
+import net.minecraft.world.item.Item;
 
 import java.util.function.Predicate;
+
+import static net.dries007.tfc.util.Metal.ItemType.properties;
+
 public class TJFCMetal {
     public enum Default {
         ALUMINUM("tfc_ie_addon", true, false, false),
@@ -50,7 +54,7 @@ public class TJFCMetal {
             return armor;
         }
 
-        public boolean hasUtility() {
+        public boolean hasUtilities() {
             return utility;
         }
 
@@ -68,24 +72,28 @@ public class TJFCMetal {
     }
     public enum ItemType {
         SCRAP(TJFCMetal.Type.PART);
-        ItemType(Type type) {
+
+
+
+        private ItemType(TJFCMetal.Type type) {
+
         }
     }
 
     private enum Type {
         DEFAULT((metal) -> true),
-        PART(Metal.Default::hasParts),
-        TOOL(Metal.Default::hasTools),
-        ARMOR(Metal.Default::hasArmor),
-        UTILITY(Metal.Default::hasUtilities);
+        PART(TJFCMetal.Default::hasParts),
+        //TOOL(TJFCMetal.Default::hasTools),
+        ARMOR(TJFCMetal.Default::hasArmor),
+        UTILITY(TJFCMetal.Default::hasUtilities);
 
-        private final Predicate<Metal.Default> predicate;
+        private final Predicate<TJFCMetal.Default> predicate;
 
-        private Type(Predicate<Metal.Default> predicate) {
+        Type(Predicate<TJFCMetal.Default> predicate) {
             this.predicate = predicate;
         }
 
-        boolean hasType(Metal.Default metal) {
+        boolean hasType(TJFCMetal.Default metal) {
             return this.predicate.test(metal);
         }
     }
