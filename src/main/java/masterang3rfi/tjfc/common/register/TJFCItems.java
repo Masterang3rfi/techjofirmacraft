@@ -1,28 +1,34 @@
 package masterang3rfi.tjfc.common.register;
 
-import masterang3rfi.tjfc.common.enums.Mold;
+import masterang3rfi.tjfc.common.enums.TJFCMetal;
+import masterang3rfi.tjfc.common.enums.TJFCMold;
 import masterang3rfi.tjfc.common.items.TJFCBasicItem;
+import net.dries007.tfc.util.Helpers;
+import net.dries007.tfc.util.Metal;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+
+import java.util.Arrays;
 import java.util.EnumMap;
+import java.util.Map;
 
 
 import static masterang3rfi.tjfc.TechjoFirmaCraft.MODID;
 
 public final class TJFCItems {
 
-    public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static EnumMap<Mold,RegistryObject<Item>> MOLDS;
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final EnumMap<TJFCMold,RegistryObject<Item>> MOLDS;
+    public static final Map<Metal.Default, Map<Metal.ItemType, RegistryObject<Item>>> METAL_ITEMS;
+
 
     static {
-        MOLDS = registerEnum(Mold.class,MOLDS);
+        METAL_ITEMS = Helpers.mapOfKeys(TJFCMetal.Default.class, TJFCMetal.Default::hasParts, (metal) -> registerBasic("metal/scrap/" + metal.name().toLowerCase()));
+        MOLDS = Helpers.mapOfKeys(TJFCMold.class,(TJFCMold) -> registerBasicWithStackSize("mold/" + TJFCMold.name().toLowerCase(),1));
     }
-
-
-
-
 
     private static RegistryObject<Item> registerBasicWithStackSize(String name, int stackSize) {
         return ITEMS.register(name, () -> new TJFCBasicItem(new Item.Properties().stacksTo(stackSize)));
@@ -31,26 +37,22 @@ public final class TJFCItems {
         return ITEMS.register(name, () -> new TJFCBasicItem(new Item.Properties()));
     }
 
-    private static <E extends Enum<E>> EnumMap<E,RegistryObject<Item>> registerEnum(Class<E> enumClass,EnumMap<E,RegistryObject<Item>> enumMap) {
-        enumMap = registerEnum(enumClass,enumMap,"");
-        return enumMap;
-    }
-    private static <E extends Enum<E>> EnumMap<E,RegistryObject<Item>> registerEnum(Class<E> enumClass,EnumMap<E,RegistryObject<Item>> enumMap,String prefixDirectory) {
-        E[] array = enumClass.getEnumConstants();
 
-        if (enumMap == null) {
-            enumMap = new EnumMap<>(enumClass);
-        }
 
-        for (E thing : array) {
-            String rootName = enumClass.getSimpleName().toLowerCase();
-            if (rootName.endsWith("s")) {
-                rootName = rootName.substring(0,rootName.length() - 1);
-            }
+    //private static <E extends Enum<E>> EnumMap<E,RegistryObject<Item>> registerEnum(Class<E> enumClass, String directory) {
+        //return registerEnum(enumClass, directory,64);
+   //}
+    //private static <E extends Enum<E>> EnumMap<E,RegistryObject<Item>> registerEnum(Class<E> enumClass, String directory, int stackSize) {
+        //E[] array = enumClass.getEnumConstants();
 
-            enumMap.put(thing,registerBasicWithStackSize(prefixDirectory + rootName + "/" + thing.toString().toLowerCase(),1));
-        }
-        return enumMap;
-    }
+        //EnumMap<E, RegistryObject<Item>> enumMap = new EnumMap<>(enumClass);
+
+        //for (E thing : array) {
+
+            //enumMap.put(thing,registerBasicWithStackSize(directory + thing.toString().toLowerCase(),stackSize));
+
+        //}
+        //return enumMap;
+    //}
 
 }

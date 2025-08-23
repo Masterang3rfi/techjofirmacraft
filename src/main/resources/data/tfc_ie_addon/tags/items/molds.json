@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "tjfc:mold/blank",
     "tjfc:mold/bucket",
     "tjfc:mold/double_ingot",
     "tjfc:mold/axe",

@@ -70,8 +70,6 @@ public class TechjoFirmaCraft
 
         TJFCItems.ITEMS.register(modEventBus);
 
-
-
         TJFCCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in

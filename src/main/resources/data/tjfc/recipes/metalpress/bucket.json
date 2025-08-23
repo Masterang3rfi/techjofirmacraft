@@ -3,7 +3,7 @@
   "mold": "tjfc:mold/bucket",
   "input": {
     "base_ingredient": {
-      "tag": "forge:ingots/steel"
+      "tag": "forge:sheets/steel"
     },
     "count": 5
   },

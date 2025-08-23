@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:blueprint",
+  "inputs": [
+    {
+      "count": 3,
+      "base_ingredient": {
+        "tag": "forge:plates/steel"
+      }
+    },
+    {
+      "item": "immersiveengineering:wirecutter"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+
+
+  ],
+  "category": "molds",
+  "result": {
+    "item": "tjfc:mold/bucket"
+  }
+}
