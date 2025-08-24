@@ -46,16 +46,35 @@ description='''Glue Mod for TechjoFirmaCraft modpack'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 
 
-[[dependencies.${mod_id}]]
-modId="tfc"
+[[dependencies.tjfc]]
+modId="tfc_ie_addon"
 mandatory=true
-# This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="${minecraft_version_range}"
+versionRange="1.2.1"
 ordering="AFTER"
 side="BOTH"
 
+[[dependencies.tjfc]]
+modId="firmalife"
+mandatory=true
+versionRange="2.1.22"
+ordering="AFTER"
+side="BOTH"
 
-[[dependencies.${mod_id}]] #optional
+[[dependencies.tjfc]]
+modId="immersiveengineering"
+mandatory=true
+versionRange="10.2.0-183"
+ordering="AFTER"
+side="BOTH"
+
+#[[dependencies.tjfc]]
+#modId="tfc"
+#mandatory=true
+#versionRange="3.2.18"
+#ordering="AFTER"
+#side="BOTH"
+
+[[dependencies.tjfc]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -70,7 +89,7 @@ side="BOTH"
     side="BOTH"
 
 # Here's another dependency
-[[dependencies.${mod_id}]]
+[[dependencies.tjfc]]
     modId="minecraft"
     mandatory=true
     # This version range declares a minimum of the current minecraft version up to but not including the next major version

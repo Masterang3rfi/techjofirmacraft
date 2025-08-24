@@ -4,16 +4,12 @@ import masterang3rfi.tjfc.common.enums.TJFCMetal;
 import masterang3rfi.tjfc.common.enums.TJFCMold;
 import masterang3rfi.tjfc.common.items.TJFCBasicItem;
 import net.dries007.tfc.util.Helpers;
-import net.dries007.tfc.util.Metal;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-
-import java.util.Arrays;
 import java.util.EnumMap;
-import java.util.Map;
 
 
 import static masterang3rfi.tjfc.TechjoFirmaCraft.MODID;
@@ -26,7 +22,7 @@ public final class TJFCItems {
 
 
     static {
-        METAL_ITEMS = Helpers.mapOfKeys(TJFCMetal.Default.class, (metal) -> Helpers.mapOfKeys(TJFCMetal.ItemType.class, (itemType -> registerBasic("metal/" + itemType.name().toLowerCase() +"/"+ metal.name().toLowerCase()))));
+        METAL_ITEMS = Helpers.mapOfKeys(TJFCMetal.Default.class, (metal) -> Helpers.mapOfKeys(TJFCMetal.ItemType.class, (itemType -> itemType.has(metal)) ,(itemType -> registerBasic("metal/" + itemType.name().toLowerCase() +"/"+ metal.name().toLowerCase()))));
         MOLDS = Helpers.mapOfKeys(TJFCMold.class,(TJFCMold) -> registerBasicWithStackSize("mold/" + TJFCMold.name().toLowerCase(),1));
     }
 

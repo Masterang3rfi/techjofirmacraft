@@ -58,6 +58,10 @@ public class TJFCMetal {
             return utility;
         }
 
+        public String getModID() {
+            return modID;
+        }
+
         final String modID;
         final boolean parts;
         final boolean armor;
@@ -75,8 +79,15 @@ public class TJFCMetal {
 
 
 
-        private ItemType(TJFCMetal.Type type) {
 
+        private final TJFCMetal.Type type;
+
+        private ItemType(TJFCMetal.Type type) {
+            this.type = type;
+        }
+
+        public boolean has(TJFCMetal.Default metal) {
+            return this.type.hasType(metal);
         }
     }
 
