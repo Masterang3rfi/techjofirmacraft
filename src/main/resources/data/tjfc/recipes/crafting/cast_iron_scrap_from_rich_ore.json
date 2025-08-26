@@ -1,0 +1,27 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tjfc:ore_pieces/iron/rich"
+      },
+      {
+        "tag": "tjfc:ore_pieces/iron/rich"
+      },
+      {
+        "tag": "tjfc:ore_pieces/iron/rich"
+      },
+      {
+        "tag": "tjfc:ore_pieces/iron/rich"
+      },
+      {
+        "tag": "tjfc:hammers_hard"
+      }
+    ],
+    "result": {
+      "item": "tjfc:metal/scrap/cast_iron",
+      "count": 3
+    }
+  }
+}

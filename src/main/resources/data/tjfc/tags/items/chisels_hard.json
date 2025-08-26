@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:metal/chisel/black_steel",
+    "tfc:metal/chisel/blue_steel",
+    "tfc:metal/chisel/red_steel"
+  ]
+}

@@ -1,7 +1,7 @@
 package masterang3rfi.tjfc.common.register;
 
-import masterang3rfi.tjfc.common.enums.TJFCMetal;
-import masterang3rfi.tjfc.common.enums.TJFCMold;
+import masterang3rfi.tjfc.common.items.TJFCMetal;
+import masterang3rfi.tjfc.common.items.TJFCMold;
 import net.dries007.tfc.common.TFCCreativeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -27,15 +27,16 @@ public class TJFCCreativeTabs {
                 }
             }).build());
 
-    public static final RegistryObject<CreativeModeTab> TJFC_TAB_SCRAPS = CREATIVE_MODE_TABS.register("scraps", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TJFC_TAB_METALS = CREATIVE_MODE_TABS.register("metals", () -> CreativeModeTab.builder()
             .withTabsBefore(TFCCreativeTabs.WOOD.tab().getId())
-            .icon(() -> new ItemStack(TJFCItems.MOLDS.get(TJFCMold.BUCKET).get()))
-            .title(Component.translatable("creativetab.tjfc.scraps"))
+            .icon(() -> new ItemStack(TJFCItems.METAL_ITEMS.get(TJFCMetal.Default.CAST_IRON).get(TJFCMetal.ItemType.SCRAP).get()))
+            .title(Component.translatable("creativetab.tjfc.metals"))
             .displayItems((parameters, output) -> {
                 for (EnumMap<TJFCMetal.ItemType, RegistryObject<Item>> itemMap : TJFCItems.METAL_ITEMS.values()) {
-                    RegistryObject<Item> item = itemMap.get(TJFCMetal.ItemType.SCRAP);
-                    if (item != null) {
-                        output.accept(item.get());
+                    for (RegistryObject<Item> item : itemMap.values()) {
+                        if (item != null) {
+                            output.accept(item.get());
+                        }
                     }
                 }
             }).build());

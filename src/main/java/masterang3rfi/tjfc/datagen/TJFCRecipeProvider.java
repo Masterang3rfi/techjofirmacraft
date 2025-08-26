@@ -1,5 +1,7 @@
 package masterang3rfi.tjfc.datagen;
 
+import net.dries007.tfc.common.recipes.TFCRecipeSerializers;
+import net.dries007.tfc.common.recipes.TFCRecipeTypes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;

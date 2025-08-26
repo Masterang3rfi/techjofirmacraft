@@ -1,0 +1,8 @@
+{
+  "ingredient": {
+    "item": "tjfc:metal/screw/wrought_iron"
+  },
+  "heat_capacity": 0.71425,
+  "forging_temperature": 924,
+  "welding_temperature": 1232
+}

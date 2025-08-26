@@ -1,9 +1,9 @@
 package masterang3rfi.tjfc.common.register;
 
-import masterang3rfi.tjfc.common.enums.TJFCMetal;
-import masterang3rfi.tjfc.common.enums.TJFCMold;
+import masterang3rfi.tjfc.common.items.TJFCMetal;
+import masterang3rfi.tjfc.common.items.TJFCMold;
 import masterang3rfi.tjfc.common.items.TJFCBasicItem;
-import net.dries007.tfc.util.Helpers;
+import masterang3rfi.tjfc.util.Helpers;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

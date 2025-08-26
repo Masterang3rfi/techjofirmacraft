@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "tjfc:metal/scrap/uranium"
+  },
+  "result_fluid": {
+    "fluid": "tfc_ie_addon:metal/uranium",
+    "amount": 100
+  },
+  "temperature": 1250
+}

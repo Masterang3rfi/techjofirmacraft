@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "tjfc:metal/scrap/aluminum",
+    "tjfc:metal/scrap/bismuth",
+    "tjfc:metal/scrap/cast_iron",
+    "tjfc:metal/scrap/chromium",
+    "tjfc:metal/scrap/copper",
+    "tjfc:metal/scrap/gold",
+    "tjfc:metal/scrap/lead",
+    "tjfc:metal/scrap/nickel",
+    "tjfc:metal/scrap/silver",
+    "tjfc:metal/scrap/tin",
+    "tjfc:metal/scrap/uranium",
+    "tjfc:metal/scrap/zinc"
+  ]
+}

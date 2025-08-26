@@ -1,0 +1,20 @@
+{
+  "type": "tfc:damage_inputs_shapeless_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "tag": "tjfc:ore_pieces/silver/normal"
+      },
+      {
+        "tag": "tjfc:ore_pieces/silver/normal"
+      },
+      {
+        "tag": "tjfc:hammers_hard"
+      }
+    ],
+    "result": {
+      "item": "tjfc:metal/scrap/silver"
+    }
+  }
+}

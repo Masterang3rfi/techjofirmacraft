@@ -48,31 +48,31 @@ description='''Glue Mod for TechjoFirmaCraft modpack'''
 
 [[dependencies.tjfc]]
 modId="tfc_ie_addon"
-mandatory=true
+mandatory=false
 versionRange="1.2.1"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.tjfc]]
 modId="firmalife"
-mandatory=true
+mandatory=false
 versionRange="2.1.22"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.tjfc]]
 modId="immersiveengineering"
-mandatory=true
+mandatory=false
 versionRange="10.2.0-183"
 ordering="AFTER"
 side="BOTH"
 
-#[[dependencies.tjfc]]
-#modId="tfc"
-#mandatory=true
-#versionRange="3.2.18"
-#ordering="AFTER"
-#side="BOTH"
+[[dependencies.tjfc]]
+modId="tfc"
+mandatory=true
+versionRange="3.2.18"
+ordering="AFTER"
+side="BOTH"
 
 [[dependencies.tjfc]] #optional
     # the modid of the dependency
