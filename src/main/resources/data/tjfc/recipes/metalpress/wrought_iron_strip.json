@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/strip",
+  "input": {
+    "tag": "forge:ingots/wrought_iron"
+  },
+  "result": {
+    "item": "tjfc:metal/strip/wrought_iron",
+    "count": 2
+  },
+  "energy": 2400
+}

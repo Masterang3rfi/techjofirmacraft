@@ -1,23 +1,18 @@
 {
-  "item.tjfc.mold.bucket": "Metal Press Mold: Bucket",
-  "item.tjfc.mold.block": "Metal Press Mold: Block",
-  "item.tjfc.mold.double_ingot": "Metal Press Mold: Double Ingot",
-  "item.tjfc.mold.axe": "Metal Press Mold: Axe Head",
-  "item.tjfc.mold.chisel": "Metal Press Mold: Chisel Head",
-  "item.tjfc.mold.hammer": "Metal Press Mold: Hammer Head",
-  "item.tjfc.mold.hoe": "Metal Press Mold: Hoe Head",
-  "item.tjfc.mold.javelin": "Metal Press Mold: Javelin Head",
-  "item.tjfc.mold.knife": "Metal Press Mold: Knife Head",
-  "item.tjfc.mold.mace": "Metal Press Mold: Mace Head",
-  "item.tjfc.mold.pickaxe": "Metal Press Mold: Pickaxe Head",
-  "item.tjfc.mold.propick": "Metal Press Mold: Prospector's Pick Head",
-  "item.tjfc.mold.saw": "Metal Press Mold: Saw Head",
-  "item.tjfc.mold.scythe": "Metal Press Mold: Scythe Head",
-  "item.tjfc.mold.shovel": "Metal Press Mold: Shovel Head",
-  "item.tjfc.mold.sword": "Metal Press Mold: Sword Blade",
+  "creativetab.tjfc.metals": "TJFC Metal Stuffs",
+  "creativetab.tjfc.molds": "TJFC Molds",
 
+
+
+  "item.minecraft.bucket": "Ultimate Bucket",
+
+
+
+  "item.tjfc.metal.bolt.steel": "Steel Bolt",
+  "item.tjfc.metal.bolt.wrought_iron": "Wrought Iron Bolt",
   "item.tjfc.metal.scrap.aluminum": "Aluminum Scrap",
   "item.tjfc.metal.scrap.bismuth": "Bismuth Scrap",
+  "item.tjfc.metal.scrap.cast_iron": "Cast Iron Scrap",
   "item.tjfc.metal.scrap.chromium": "Chromium Scrap",
   "item.tjfc.metal.scrap.copper": "Copper Scrap",
   "item.tjfc.metal.scrap.gold": "Gold Scrap",
@@ -26,23 +21,31 @@
   "item.tjfc.metal.scrap.silver": "Silver Scrap",
   "item.tjfc.metal.scrap.tin": "Tin Scrap",
   "item.tjfc.metal.scrap.uranium": "Uranium Scrap",
-  "item.tjfc.metal.scrap.cast_iron": "Cast Iron Scrap",
   "item.tjfc.metal.scrap.zinc": "Zinc Scrap",
-
-  "item.tjfc.metal.bolt.steel": "Steel Bolt",
-  "item.tjfc.metal.bolt.wrought_iron": "Wrought Iron Bolt",
-
   "item.tjfc.metal.screw.steel": "Steel Screw",
   "item.tjfc.metal.screw.wrought_iron": "Wrought Iron Screw",
-
   "item.tjfc.metal.strip.steel": "Steel Strip",
   "item.tjfc.metal.strip.wrought_iron": "Wrought Iron Strip",
 
 
 
-
-
-  "creativetab.tjfc.molds": "TJFC Molds",
-  "creativetab.tjfc.metals": "TJFC Metal Stuffs",
-  "item.minecraft.bucket": "Ultimate Bucket"
+  "item.tjfc.mold.axe": "Metal Press Mold: Axe Head",
+  "item.tjfc.mold.block": "Metal Press Mold: Block",
+  "item.tjfc.mold.bolt": "Metal Press Mold: Bolt",
+  "item.tjfc.mold.bucket": "Metal Press Mold: Bucket",
+  "item.tjfc.mold.chisel": "Metal Press Mold: Chisel Head",
+  "item.tjfc.mold.double_ingot": "Metal Press Mold: Double Ingot",
+  "item.tjfc.mold.hammer": "Metal Press Mold: Hammer Head",
+  "item.tjfc.mold.hoe": "Metal Press Mold: Hoe Head",
+  "item.tjfc.mold.javelin": "Metal Press Mold: Javelin Head",
+  "item.tjfc.mold.knife": "Metal Press Mold: Knife Head",
+  "item.tjfc.mold.mace": "Metal Press Mold: Mace Head",
+  "item.tjfc.mold.pickaxe": "Metal Press Mold: Pickaxe Head",
+  "item.tjfc.mold.propick": "Metal Press Mold: Prospector's Pick Head",
+  "item.tjfc.mold.saw": "Metal Press Mold: Saw Head",
+  "item.tjfc.mold.screw": "Metal Press Mold: Screw",
+  "item.tjfc.mold.scythe": "Metal Press Mold: Scythe Head",
+  "item.tjfc.mold.shovel": "Metal Press Mold: Shovel Head",
+  "item.tjfc.mold.strip": "Metal Press Mold: Strip",
+  "item.tjfc.mold.sword": "Metal Press Mold: Sword"
 }

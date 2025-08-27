@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/strip",
+  "input": {
+    "tag": "forge:ingots/steel"
+  },
+  "result": {
+    "item": "tjfc:metal/strip/steel",
+    "count": 2
+  },
+  "energy": 2400
+}

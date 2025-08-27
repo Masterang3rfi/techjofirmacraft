@@ -1,0 +1,12 @@
+{
+  "type": "immersiveengineering:metal_press",
+  "mold": "tjfc:mold/screw",
+  "input": {
+    "tag": "forge:ingots/wrought_iron"
+  },
+  "result": {
+    "item": "tjfc:metal/screw/wrought_iron",
+    "count": 4
+  },
+  "energy": 2400
+}
