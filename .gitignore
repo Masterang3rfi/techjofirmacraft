@@ -21,10 +21,12 @@ build
 eclipse
 
 run/*
+
+!run/scripts/
+!run/saves
+
 run/saves/devNormalTFC/*
-!run/scripts
 !run/saves/devNormalTFC/datapacks
-!run/saves/devNormalTFC/datapacks/**
 
 run-data
 
