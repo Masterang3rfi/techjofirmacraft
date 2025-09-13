@@ -27,6 +27,9 @@ run/*
 
 run/saves/devNormalTFC/*
 !run/saves/devNormalTFC/datapacks
+!run/resourcepacks
+
+
 
 run-data
 
