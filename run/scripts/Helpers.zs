@@ -29,4 +29,41 @@ public function addHeatingRecipe(recipeName as string, inputItem as IItemStack, 
       },
       "temperature": temperature
     });
+    }
+
+public function addAnvilRecipeThreeRule(recipeName as string, inputItem as IItemStack, outputItem as IItemStack, tier as int, rule0 as string, rule1 as string, rule2 as string, forging_bonus as bool) as void {
+    <recipetype:tfc:anvil>.addJsonRecipe(recipeName, {
+        "type": "tfc:anvil",
+        "input": {
+            "item": inputItem.registryName
+        },
+        "result": {
+            "item": outputItem.registryName
+        },
+        "tier": tier,
+        "rules": [
+            rule0,
+            rule1,
+            rule2
+        ],
+        "apply_forging_bonus": forging_bonus
+    });
+}
+
+public function addAnvilRecipeTwoRule(recipeName as string, inputItem as IItemStack, outputItem as IItemStack, tier as int, rule0 as string, rule1 as string, rule2 as string, forging_bonus as bool) as void {
+    <recipetype:tfc:anvil>.addJsonRecipe(recipeName, {
+        "type": "tfc:anvil",
+        "input": {
+            "item": inputItem.registryName
+        },
+        "result": {
+            "item": outputItem.registryName
+        },
+        "tier": tier,
+        "rules": [
+            rule0,
+            rule1
+        ],
+        "apply_forging_bonus": forging_bonus
+    });
 }
