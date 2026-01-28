@@ -3,6 +3,15 @@ import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.data.IData;
 import crafttweaker.api.fluid.IFluidStack;
 
+public class constants {
+
+
+
+
+
+
+}
+
 public class vars {
 
     public static val redstone_acid = <item:immersiveengineering:redstone_acid_bucket> | <item:tfc:metal/bucket/red_steel>.withTag({fluid: {FluidName: "immersiveengineering:redstone_acid", Amount: 1000}}) | <item:tfc:wooden_bucket>.withTag({fluid: {FluidName: "immersiveengineering:redstone_acid", Amount: 1000}});
@@ -77,18 +86,40 @@ public function addAnvilRecipeTwoRule(recipeName as string, inputItem as IItemSt
     });
 }
 
-public function addBlastFurnace(recipeName as string, inputItem as IIngredient, outputItem as IItemStack) as void {
+public function addBlastFurnace(recipeName as string, inputItem as IIngredient, inputAmount as int, outputItem as IItemStack, outputAmount as int) as void {
     <recipetype:immersiveengineering:blast_furnace>.addJsonRecipe(recipeName, {
         "type": "immersiveengineering:blast_furnace",
-        "input": [
-            inputItem as IData,
-        ],
+        "input": {
+            "base_ingredient": [
+              inputItem as IData
+            ],
+            "count": inputAmount
+        },
         "result": {
             "item": outputItem.registryName,
+            "count": outputAmount
         },
         "slag": {
             "tag": "forge:slag"
           },
         time: 1200
     });
+}
+
+public function addMetalPress(recipeName as string, inputItem as IIngredient, inputAmount as int, outputItem as IItemStack, outputAmount as int, moldItem as IItemStack) as void {
+    <recipetype:immersiveengineering:blast_furnace>.addJsonRecipe(recipeName, {
+        "type": "immersiveengineering:metal_press",
+        "mold": moldItem.registryName,
+        "input": {
+          "base_ingredient": [
+            inputItem as IData
+          ],
+          "count": inputAmount
+        },
+        "result": {
+          "item": outputItem.registryName,
+          "count": outputAmount
+        },
+        "energy": 2400
+      });
 }
