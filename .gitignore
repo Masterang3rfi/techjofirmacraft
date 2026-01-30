@@ -1,5 +1,7 @@
 .idea
 
+config/jei/world/*
+
 defaultconfigs
 disabledmods
 jarmods
@@ -10,3 +12,5 @@ instance.json
 options.txt
 usercache.json
 usernamecache.json
+
+patchouli_data.json
