@@ -26,6 +26,13 @@ addAnvilRecipeThreeRule("anvil/wire_steel", <item:tjfc:metal/wire/steel>, <item:
 
 addAnvilRecipeThreeRule("anvil/revolver_hammer", <item:tfc:metal/rod/steel>, <item:immersiveengineering:gunpart_hammer>, 4, "bend_last", "bend_second_last", "draw_third_last", false);
 
+//Arc Furnace
+
+<recipetype:immersiveengineering:arc_furnace>.removeByModid("immersiveengineering");
+
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("constantan", <tag:items:forge:ingots/copper> * 1, [<tag:items:forge:ingots/nickel> * 1], 100, 51200, [<item:immersiveengineering:ingot_constantan> * 2]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("electrum", <tag:items:forge:ingots/gold> * 1, [<tag:items:forge:ingots/silver> * 1], 100, 51200, [<item:immersiveengineering:ingot_electrum> * 2]);
+
 //Blast Furnace
 
 <recipetype:immersiveengineering:blast_furnace>.removeByName("immersiveengineering:blastfurnace/steel_block");
@@ -193,12 +200,17 @@ addCraftingFence("crafting/treated_fence", <item:immersiveengineering:treated_fe
 
 //Crusher Recipes
 
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/red_sandstone");
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/sandstone");
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_lapis");
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_quartz");
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_coal");
-<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/blaze_powder");
+<recipetype:immersiveengineering:crusher>.removeByModid("immersiveengineering");
+
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/red_sandstone");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/sandstone");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_lapis");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_quartz");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_coal");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/blaze_powder");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/coke");
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/coke_block");
+
 
 //Glassworking Recipes
 

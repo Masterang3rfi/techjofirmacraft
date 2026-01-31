@@ -16,40 +16,43 @@ public expand string[] {
 }
 
 public enum Metal {
-    ALUMINUM("tfc_ie_addon","aluminum", false, false),
-    BISMUTH_BRONZE("tfc","bismuth_bronze", true, true),
-    BLACK_BRONZE("tfc","black_bronze", true, true),
-    BLACK_STEEL("tfc","black_steel", true, true),
-    BLUE_STEEL("tfc","blue_steel", true, true),
-    BRASS("tfc","brass", true, false),
-    BRONZE("tfc","bronze", true, true),
-    CAST_IRON("tfc","cast_iron", true, false),
-    CHROMIUM("firmalife","chromium", true, false),
-    COPPER("tfc","copper", true, true),
-    GOLD("tfc","gold", true, false),
-    NICKEL("tfc","nickel", true, false),
-    PIG_IRON("tfc","pig_iron", false, false),
-    RED_STEEL("tfc","red_steel", true, true),
-    ROSE_GOLD("tfc","rose_gold", true, false),
-    SILVER("tfc","silver", true, false),
-    STAINLESS_STEEL("firmalife","stainless_steel", true, false),
-    STEEL("tfc","steel", true, true),
-    STERLING_SILVER("tfc","sterling_silver", true, false),
-    TIN("tfc","tin", true, false),
-    URANIUM("tfc_ie_addon", "uranium", false , false),
-    WROUGHT_IRON("tfc", "wrought_iron", true, true),
-    ZINC("tfc", "zinc", true, false);
+    ALUMINUM("tfc_ie_addon","aluminum", false, false, true),
+    BISMUTH("tfc","bismuth", true, false, true),
+    BISMUTH_BRONZE("tfc","bismuth_bronze", true, true, false),
+    BLACK_BRONZE("tfc","black_bronze", true, true, false),
+    BLACK_STEEL("tfc","black_steel", true, true, false),
+    BLUE_STEEL("tfc","blue_steel", true, true, false),
+    BRASS("tfc","brass", true, false, false),
+    BRONZE("tfc","bronze", true, true, false),
+    CAST_IRON("tfc","cast_iron", true, false, true),
+    CHROMIUM("firmalife","chromium", true, false, true),
+    COPPER("tfc","copper", true, true, true),
+    GOLD("tfc","gold", true, false, true),
+    NICKEL("tfc","nickel", true, false, true),
+    PIG_IRON("tfc","pig_iron", false, false, false),
+    RED_STEEL("tfc","red_steel", true, true, false),
+    ROSE_GOLD("tfc","rose_gold", true, false, false),
+    SILVER("tfc","silver", true, false, true),
+    STAINLESS_STEEL("firmalife","stainless_steel", true, false, false),
+    STEEL("tfc","steel", true, true, false),
+    STERLING_SILVER("tfc","sterling_silver", true, false, false),
+    TIN("tfc","tin", true, false, true),
+    URANIUM("tfc_ie_addon", "uranium", false , false, true),
+    WROUGHT_IRON("tfc", "wrought_iron", true, true, false),
+    ZINC("tfc", "zinc", true, false, true);
 
     val modID as string;
     val metalName as string;
     val parts as bool;
     val tools as bool;
+    val ore as bool;
 
-    this(modID as string, metalName as string, parts as bool, tools as bool) {
+    this(modID as string, metalName as string, parts as bool, tools as bool, ore as bool) {
         this.modID = modID;
         this.metalName = metalName;
         this.parts = parts;
         this.tools = tools;
+        this.ore = ore;
     }
 
     public modID() as string {
@@ -66,6 +69,75 @@ public enum Metal {
 
     public hasTools() as bool {
         return tools;
+    }
+
+    public hasOre() as bool {
+        return ore;
+    }
+}
+
+public enum Ore {
+
+    CHROMITE("firmalife","chromite"),
+    NATIVE_COPPER("tfc","native_copper"),
+    NATIVE_GOLD("tfc","native_gold"),
+    HEMATITE("tfc","hematite"),
+    NATIVE_SILVER("tfc","native_silver"),
+    CASSITERITE("tfc","cassiterite"),
+    BISMUTHINITE("tfc","bismuthinite"),
+    GARNIERITE("tfc","garnierite"),
+    MALACHITE("tfc","malachite"),
+    MAGNETITE("tfc","magnetite"),
+    LIMONITE("tfc","limonite"),
+    SPHALERITE("tfc","sphalerite"),
+    TETRAHEDRITE("tfc","tetrahedrite"),
+    BAUXITE("tfc_ie_addon","bauxite"),
+    GALENA("tfc_ie_addon","galena"),
+    URANINITE("tfc_ie_addon","uraninite");
+
+    val modID as string;
+    val oreName as string;
+
+    this(modID as string, oreName as string) {
+        this.modID = modID;
+        this.oreName = oreName;
+    }
+
+    public modID() as string {
+        return modID;
+    }
+
+    public getName() as string {
+        return oreName;
+    }
+}
+
+public enum Gem {
+
+    AMETHYST("tfc","amethyst"),
+    DIAMOND("tfc","diamond"),
+    EMERALD("tfc","emerald"),
+    LAPIS_LAZULI("tfc","lapis_lazuli"),
+    OPAL("tfc","opal"),
+    PYRITE("tfc","pyrite"),
+    RUBY("tfc","ruby"),
+    SAPPHIRE("tfc","sapphire"),
+    TOPAZ("tfc","topaz");
+
+    val modID as string;
+    val itemName as string;
+
+    this(modID as string, itemName as string) {
+        this.modID = modID;
+        this.itemName = itemName;
+    }
+
+    public modID() as string {
+        return modID;
+    }
+
+    public getName() as string {
+        return itemName;
     }
 }
 
@@ -127,6 +199,18 @@ public class vars {
     public static val iron_ingot = <tag:items:forge:ingots/iron>;
     public static val iron_plate  = <tag:items:forge:plates/iron>;
     public static val constantan_plate = <tag:items:forge:plates/constantan>;
+
+    public static val copper = <tag:items:forge:ingots/copper>;
+    public static val gold = <tag:items:forge:ingots/gold>;
+    public static val zinc = <tag:items:forge:ingots/zinc>;
+    public static val brass = <tag:items:forge:ingots/brass>;
+    public static val bismuth = <tag:items:forge:ingots/bismuth>;
+    public static val silver = <tag:items:forge:ingots/silver>;
+    public static val steel = <tag:items:forge:ingots/steel>;
+    public static val wrought_iron = <tag:items:forge:ingots/wrought_iron>;
+    public static val cast_iron = <tag:items:forge:ingots/cast_iron>;
+    public static val tin = <tag:items:forge:ingots/tin>;
+    public static val nickel = <tag:items:forge:ingots/nickel>;
 
 
 }
