@@ -1,6 +1,6 @@
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.data.IData;
-
+import mods.immersiveengineering.Crusher;
 
 
 

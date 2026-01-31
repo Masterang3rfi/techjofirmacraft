@@ -23,6 +23,11 @@ craftingTable.removeByName("tfc_ie_addon:crafting/electrum_sheet_to_plate");
 craftingTable.removeByName("tfc_ie_addon:crafting/wrought_iron_sheet_to_plate");
 craftingTable.removeByName("tfc_ie_addon:crafting/gold_sheet_to_plate");
 
+//Crusher
+
+//<recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/");
+
+
 //Metal Press
 
 <recipetype:immersiveengineering:metal_press>.removeByModid("tfc_ie_addon");

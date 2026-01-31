@@ -242,6 +242,26 @@ public function addBlastFurnace(recipeName as string, inputItem as IIngredient, 
     });
 }
 
+public function addCrusher(recipeName as string, inputItem as IIngredient, inputAmount as int, outputItem as IItemStack, outputAmount as int) as void {
+    <recipetype:immersiveengineering:blast_furnace>.addJsonRecipe(recipeName, {
+        "type": "immersiveengineering:blast_furnace",
+        "input": {
+            "base_ingredient": [
+              inputItem as IData
+            ],
+            "count": inputAmount
+        },
+        "result": {
+            "item": outputItem.registryName,
+            "count": outputAmount
+        },
+        "slag": {
+            "tag": "forge:slag"
+          },
+        time: 1200
+    });
+}
+
 public function addMetalPress(recipeName as string, inputItem as IIngredient, inputAmount as int, outputItem as IItemStack, outputAmount as int, moldItem as IItemStack) as void {
     <recipetype:immersiveengineering:metal_press>.addJsonRecipe(recipeName, {
         "type": "immersiveengineering:metal_press",
