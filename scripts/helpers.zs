@@ -149,18 +149,10 @@ public function addCraftingFence(recipeName as string, outputItem as IItemStack,
 public function addGlassworking(recipeName as string, inputItem as IIngredient, resultItem as IItemStack, operations as IData) as void {
     <recipetype:tfc:glassworking>.addJsonRecipe(recipeName, {
          "type": "tfc:glassworking",
-         "operations": [
-            operations
-         ],
-         "batch": [
-           inputItem as IData
-         ],
-         "result": [
-           resultItem as IData
-         ]
-
-
-       });
+         "operations": operations,
+         "batch": inputItem as IData,
+         "result": resultItem as IData,
+    });
 }
 
 public function addHeatingSolid(recipeName as string, inputItem as IItemStack, resultItem as IItemStack, temperature as int) as void {

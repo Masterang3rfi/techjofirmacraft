@@ -202,7 +202,7 @@ addCraftingFence("crafting/treated_fence", <item:immersiveengineering:treated_fe
 
 //Glassworking Recipes
 
-addGlassworking("glassworking/test", <tag:items:tfc:glass_batches>, <item:tfc:rock/raw/basalt>, ["basin_pour"] as IData);
+addGlassworking("glassworking/insulated_glass", <tag:items:tfc:glass_batches>, <item:immersiveengineering:insulating_glass>, ["iron","basin_pour"]);
 
 //Heating Recipes
 
