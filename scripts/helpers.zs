@@ -1,10 +1,19 @@
+#priority 100
+
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.data.IData;
 import crafttweaker.api.fluid.IFluidStack;
 import crafttweaker.api.bracket.BracketHandlers;
+import crafttweaker.api.data.ListData;
 
-
+public expand string[] {
+    public implicit as IData {
+        var list = new ListData();
+        for a in this  { list.add(a as IData); }
+        return list;
+    }
+}
 
 public enum Metal {
     ALUMINUM("tfc_ie_addon","aluminum", false, false),
@@ -136,6 +145,23 @@ public function addCraftingFence(recipeName as string, outputItem as IItemStack,
 }
 
 //TFC Helpers
+
+public function addGlassworking(recipeName as string, inputItem as IIngredient, resultItem as IItemStack, operations as IData) as void {
+    <recipetype:tfc:glassworking>.addJsonRecipe(recipeName, {
+         "type": "tfc:glassworking",
+         "operations": [
+            operations
+         ],
+         "batch": [
+           inputItem as IData
+         ],
+         "result": [
+           resultItem as IData
+         ]
+
+
+       });
+}
 
 public function addHeatingSolid(recipeName as string, inputItem as IItemStack, resultItem as IItemStack, temperature as int) as void {
     <recipetype:tfc:heating>.addJsonRecipe(recipeName, {

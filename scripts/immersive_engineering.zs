@@ -1,4 +1,5 @@
 import crafttweaker.api.ingredient.IIngredient;
+import crafttweaker.api.data.IData;
 
 
 
@@ -198,6 +199,10 @@ addCraftingFence("crafting/treated_fence", <item:immersiveengineering:treated_fe
 <recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_quartz");
 <recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/ore_coal");
 <recipetype:immersiveengineering:crusher>.removeByName("immersiveengineering:crusher/blaze_powder");
+
+//Glassworking Recipes
+
+addGlassworking("glassworking/test", <tag:items:tfc:glass_batches>, <item:tfc:rock/raw/basalt>, ["basin_pour"] as IData);
 
 //Heating Recipes
 
