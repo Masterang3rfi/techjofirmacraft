@@ -30,8 +30,12 @@ addAnvilRecipeThreeRule("anvil/revolver_hammer", <item:tfc:metal/rod/steel>, <it
 
 <recipetype:immersiveengineering:arc_furnace>.removeByModid("immersiveengineering");
 
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("constantan", <tag:items:forge:ingots/copper> * 1, [<tag:items:forge:ingots/nickel> * 1], 100, 51200, [<item:immersiveengineering:ingot_constantan> * 2]);
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("electrum", <tag:items:forge:ingots/gold> * 1, [<tag:items:forge:ingots/silver> * 1], 100, 51200, [<item:immersiveengineering:ingot_electrum> * 2]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/aluminum", <item:tjfc:metal/scrap/aluminum> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_aluminum> * 1]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/constantan", <tag:items:forge:ingots/copper> * 1, [<tag:items:forge:ingots/nickel> * 1], 100, 51200, [<item:immersiveengineering:ingot_constantan> * 2]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/electrum", <tag:items:forge:ingots/gold> * 1, [<tag:items:forge:ingots/silver> * 1], 100, 51200, [<item:immersiveengineering:ingot_electrum> * 2]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/lead", <item:tjfc:metal/scrap/lead> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_lead> * 1]);
+<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/uranium", <item:tjfc:metal/scrap/uranium> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_uranium> * 1]);
+
 
 //Blast Furnace
 

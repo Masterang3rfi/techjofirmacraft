@@ -47,6 +47,9 @@ for gem in Gem.values {
 
 //Metal Press Recipes
 
+<recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/high_carbon_steel", <tag:items:forge:ingots/pig_iron> * 1, <item:tfc:metal/double_ingot/black_steel>, 2400, <item:tfc:metal/ingot/high_carbon_steel> * 1);
+<recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/steel", <tag:items:forge:ingots/high_carbon_steel> * 1, <item:tfc:metal/double_ingot/black_steel>, 2400, <item:tfc:metal/ingot/steel> * 1);
+
 //check looped recipes
 
 
@@ -121,13 +124,18 @@ for metal in Metal.values {
 
         if (metal.hasOre()) {
 
-            val recipeName = ("arcfurnace/" + metal.getName());
-            val inputItem = BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName());
-            val outputItem = BracketHandlers.getItem("tfc:metal/ingot/" + metal.getName());
+            <recipetype:immersiveengineering:arc_furnace>.addRecipe(("arcfurnace/" + metal.getName()), (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1, [], 100, 51200, [(BracketHandlers.getItem("tfc:metal/ingot/" + metal.getName())) * 1]);
 
-            <recipetype:immersiveengineering:arc_furnace>.addRecipe(recipeName, inputItem * 1, [], 100, 51200, [outputItem * 1]);
+            for ore in vars.metalMapToOre[metal] {
+
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_small_" + ore.getName(), (BracketHandlers.getItem("tfc:ore/small_" + ore.getName())) * 10, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_poor_" + ore.getName(), (BracketHandlers.getItem("tfc:ore/poor_" + ore.getName())) * 4, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_normal_" + ore.getName(), (BracketHandlers.getItem("tfc:ore/normal_" + ore.getName())) * 2, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_rich_" + ore.getName(), (BracketHandlers.getItem("tfc:ore/rich_" + ore.getName())) * 4, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 3);
+
+
+            }
         }
     }
 }
-
 

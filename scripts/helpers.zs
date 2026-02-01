@@ -16,7 +16,7 @@ public expand string[] {
 }
 
 public enum Metal {
-    ALUMINUM("tfc_ie_addon","aluminum", false, false, true),
+    ALUMINUM("immersiveengineering","aluminum", false, false, true),
     BISMUTH("tfc","bismuth", true, false, true),
     BISMUTH_BRONZE("tfc","bismuth_bronze", true, true, false),
     BLACK_BRONZE("tfc","black_bronze", true, true, false),
@@ -26,8 +26,10 @@ public enum Metal {
     BRONZE("tfc","bronze", true, true, false),
     CAST_IRON("tfc","cast_iron", true, false, true),
     CHROMIUM("firmalife","chromium", true, false, true),
+    CONSTANTAN("immersiveengineering", "constantan", true, false, false),
     COPPER("tfc","copper", true, true, true),
     GOLD("tfc","gold", true, false, true),
+    LEAD("immersiveengineering", "lead", true, false, true),
     NICKEL("tfc","nickel", true, false, true),
     PIG_IRON("tfc","pig_iron", false, false, false),
     RED_STEEL("tfc","red_steel", true, true, false),
@@ -37,7 +39,7 @@ public enum Metal {
     STEEL("tfc","steel", true, true, false),
     STERLING_SILVER("tfc","sterling_silver", true, false, false),
     TIN("tfc","tin", true, false, true),
-    URANIUM("tfc_ie_addon", "uranium", false , false, true),
+    URANIUM("immersiveengineering", "uranium", false , false, true),
     WROUGHT_IRON("tfc", "wrought_iron", true, true, false),
     ZINC("tfc", "zinc", true, false, true);
 
@@ -212,7 +214,22 @@ public class vars {
     public static val tin = <tag:items:forge:ingots/tin>;
     public static val nickel = <tag:items:forge:ingots/nickel>;
 
+    public static val metalMapToOre = {
+        Metal.ALUMINUM : [Ore.BAUXITE],
+        Metal.CAST_IRON : [Ore.HEMATITE, Ore.MAGNETITE, Ore.LIMONITE],
+        Metal.CHROMIUM : [Ore.CHROMITE],
+        Metal.BISMUTH : [Ore.BISMUTHINITE],
+        Metal.COPPER : [Ore.NATIVE_COPPER, Ore.MALACHITE, Ore.TETRAHEDRITE],
+        Metal.GOLD : [Ore.NATIVE_GOLD],
+        Metal.LEAD : [Ore.GALENA],
+        Metal.NICKEL : [Ore.GARNIERITE],
+        Metal.SILVER : [Ore.NATIVE_SILVER],
+        Metal.TIN : [Ore.CASSITERITE],
+        Metal.URANIUM : [Ore.URANINITE],
+        Metal.ZINC : [Ore.SPHALERITE]
 
+
+    } as Ore[][Metal];
 }
 
 function addCraftingStairs(recipeName as string, outputItem as IItemStack, inputItem as IItemStack   ) as void {
