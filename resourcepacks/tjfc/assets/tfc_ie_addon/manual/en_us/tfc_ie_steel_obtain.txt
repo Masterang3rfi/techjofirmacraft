@@ -1,0 +1,4 @@
+Steel Creation
+It's slightly different!
+
+In TJFC, steel can be created in the classic TFC way or by a <link;crude_blast_furnace;Crude Blast Furnace> or <link;improved_blast_furnace;Improved Blast Furnace>. The only difference is that the IE machines don't do the whole process for you: They take in wrought or cast §2iron scraps and ingots§r and spit out pig iron ingots. They must be further refined by a metal press or anvil. Additionally, §2slag§r now can be obtained while you are forging pig iron to get high carbon steel.

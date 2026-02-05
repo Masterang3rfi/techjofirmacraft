@@ -1,0 +1,16 @@
+{
+  "start": {
+    "type": "item_display",
+    "items": [
+      {
+        "item": "tfc:metal/double_ingot/black_steel"
+      },
+      {
+        "item": "tjfc:metal/scrap/cast_iron"
+      },
+      {
+        "item": "tfc:metal/ingot/high_carbon_steel"
+      }
+    ]
+  }
+}

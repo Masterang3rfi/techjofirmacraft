@@ -1,0 +1,4 @@
+Electric Crucible?
+It's even better?
+There is no Electric Crucible in the TFC-IE crossover mod, but the External Heater is able to heat a Crucible just like a Charcoal Forge.
+Consuming <config;i;crucibleExternalHeaterFEPerTick>IF/t, it heats a Crucible up to <config;i;crucibleExternalHeaterTemperature>°C.

@@ -1,0 +1,6 @@
+New Alloys
+Do not get burned!
+You can now create both Electrum and Constantan with TFC's alloying system! (This also means that theres no kiln multiblock; fear not the arc furnace does a better job anyway)
+All you have to know are proportions for both alloys (they are pretty easy, trust me).
+To create Electrum you will need to mix 40-60% of Molten Gold and 40-60% of Molten Silver.
+Same story for Constantan, which consists of 40-60% of Molten Copper and 40-60% of Molten Nickel.

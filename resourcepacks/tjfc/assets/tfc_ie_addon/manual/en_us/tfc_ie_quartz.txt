@@ -1,0 +1,5 @@
+Quartz
+It's not out of this world!
+While visiting the Nether is a possibility, why not get some Quartz the safe and easy way! You can now find Quartz Geodes in the TFC Overworld, which contain Quartz Blocks and Quartz Clusters!
+Keep in mind that with time Budding Quartz Blocks can produce more Quartz Clusters.
+<&component>

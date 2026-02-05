@@ -1,0 +1,9 @@
+{
+  "blueprint_recipes": {
+    "type": "crafting",
+    "recipes": [
+      "tfc_ie_addon:crafting/blueprint_electrode",
+      "tfc_ie_addon:crafting/blueprint_special_bullet"
+    ]
+  }
+}

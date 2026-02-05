@@ -8,6 +8,11 @@
 craftingTable.removeByName("minecraft:stonecutter");
 craftingTable.removeByName("minecraft:piston");
 
+craftingTable.addShaped("crafting/lead", <item:minecraft:lead> * 1, [
+    [vars.air, <item:immersiveengineering:wirecoil_structure_rope>, <item:immersiveengineering:wirecoil_structure_rope>],
+    [vars.air, <item:immersiveengineering:wirecoil_structure_rope>, <item:immersiveengineering:wirecoil_structure_rope>],
+    [<item:immersiveengineering:wirecoil_structure_rope>, vars.air, vars.air]]);
+
 //Crusher Recipes
 
 <recipetype:immersiveengineering:crusher>.addRecipe("crusher/red_dye_from_flower", <tag:items:tfc:makes_red_dye>, 1500, <item:minecraft:red_dye> * 4);

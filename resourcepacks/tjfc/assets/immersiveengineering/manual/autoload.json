@@ -1,0 +1,12 @@
+{
+  "autoload_priority": 3,
+  "tfc_ie_addon:tfc_ie_changes": {
+    "category_weight": 8,
+    "entry_list": [
+      "tjfc:hemp",
+      "tjfc:metal_press",
+      "tjfc:cloche",
+      "tjfc:incomplete"
+    ]
+  }
+}

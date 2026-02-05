@@ -1,0 +1,40 @@
+{
+  "sheet": {
+    "type": "blueprint",
+    "recipes": [
+      {
+        "item": "tfc_ie_addon:mold_sheet"
+      }
+    ]
+  },
+  "block": {
+    "type": "blueprint",
+    "recipes": [
+      {
+        "item": "tfc_ie_addon:mold_block"
+      }
+    ]
+  },
+  "mold_blueprints": {
+    "type": "blueprint",
+    "recipes": [
+      "tjfc:blueprint/mold_axe",
+      "tjfc:blueprint/mold_bucket",
+      "tjfc:blueprint/mold_chisel",
+      "tjfc:blueprint/mold_double_ingot",
+      "tjfc:blueprint/mold_hammer",
+      "tjfc:blueprint/mold_hoe",
+      "tjfc:blueprint/mold_javelin",
+      "tjfc:blueprint/mold_knife",
+      "tjfc:blueprint/mold_mace",
+      "tjfc:blueprint/mold_pickaxe",
+      "tjfc:blueprint/mold_propick",
+      "tjfc:blueprint/mold_saw",
+      "tjfc:blueprint/mold_screw",
+      "tjfc:blueprint/mold_scythe",
+      "tjfc:blueprint/mold_shovel",
+      "tjfc:blueprint/mold_strip",
+      "tjfc:blueprint/mold_sword"
+    ]
+  }
+}

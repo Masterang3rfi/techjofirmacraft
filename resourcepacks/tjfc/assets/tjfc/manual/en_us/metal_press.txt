@@ -1,0 +1,3 @@
+Metal Press Additions
+Under Pressure
+In addition to the new <link;tfc_ie_addon:tfc_ie_mold;molds>, the <link;metal_press;Metal Press> can also process ores into their respective scraps. It can also process pig iron into steel in two steps! The press does this by using a §2black steel double ingot§r as a mold! So that's pretty nifty, I would say.

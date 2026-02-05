@@ -1,6 +1,7 @@
 import crafttweaker.api.ingredient.IIngredient;
 import crafttweaker.api.data.IData;
 import mods.immersiveengineering.Crusher;
+import crafttweaker.api.bracket.BracketHandlers;
 
 
 
@@ -30,12 +31,8 @@ addAnvilRecipeThreeRule("anvil/revolver_hammer", <item:tfc:metal/rod/steel>, <it
 
 <recipetype:immersiveengineering:arc_furnace>.removeByModid("immersiveengineering");
 
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/aluminum", <item:tjfc:metal/scrap/aluminum> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_aluminum> * 1]);
 <recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/constantan", <tag:items:forge:ingots/copper> * 1, [<tag:items:forge:ingots/nickel> * 1], 100, 51200, [<item:immersiveengineering:ingot_constantan> * 2]);
 <recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/electrum", <tag:items:forge:ingots/gold> * 1, [<tag:items:forge:ingots/silver> * 1], 100, 51200, [<item:immersiveengineering:ingot_electrum> * 2]);
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/lead", <item:tjfc:metal/scrap/lead> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_lead> * 1]);
-<recipetype:immersiveengineering:arc_furnace>.addRecipe("arcfurnace/uranium", <item:tjfc:metal/scrap/uranium> * 1, [], 50, 51200, [<item:immersiveengineering:ingot_uranium> * 1]);
-
 
 //Blast Furnace
 
@@ -88,6 +85,7 @@ craftingTable.removeByName("immersiveengineering:crafting/stairs_concrete");
 craftingTable.removeByName("immersiveengineering:crafting/stairs_concrete_brick");
 craftingTable.removeByName("immersiveengineering:crafting/stairs_concrete_tile");
 craftingTable.removeByName("immersiveengineering:crafting/stairs_concrete_leaded");
+craftingTable.removeByName("immersiveengineering:crafting/wirecoil_structure_rope");
 
 
 craftingTable.addShapeless("crafting/fertilizer", <item:immersiveengineering:fertilizer> * 3, [<tag:items:forge:dusts/saltpeter>, <tag:items:forge:slag>, <tag:items:forge:dusts/sulfur>]);
@@ -178,6 +176,11 @@ craftingTable.addShaped("crafting/metal_ladder", <item:immersiveengineering:meta
     [<tag:items:forge:rods/all_metal>, vars.air, <tag:items:forge:rods/all_metal>],
     [<tag:items:forge:rods/all_metal>, vars.air, <tag:items:forge:rods/all_metal>]]);
 
+craftingTable.addShaped("crafting/wirecoil_structure_rope", <item:immersiveengineering:wirecoil_structure_rope> * 2, [
+    [<item:immersiveengineering:hemp_fiber>, <item:immersiveengineering:hemp_fiber>, <item:immersiveengineering:hemp_fiber>],
+    [<item:immersiveengineering:hemp_fiber>, <tag:items:forge:rods/wooden>, <item:immersiveengineering:hemp_fiber>],
+    [<item:immersiveengineering:hemp_fiber>, <item:immersiveengineering:hemp_fiber>, <item:immersiveengineering:hemp_fiber>]]);
+
 
 addCraftingStairs("crafting/slag_brick_stairs", <item:immersiveengineering:stairs_slag_brick>, <item:immersiveengineering:slag_brick>);
 addCraftingStairs("crafting/treated_wood_horizontal_stairs", <item:immersiveengineering:stairs_treated_wood_horizontal>, <item:immersiveengineering:treated_wood_horizontal>);
@@ -228,6 +231,10 @@ addHeatingSolid("heating/clinker_brick", <item:minecraft:bricks>, <item:immersiv
 
 <recipetype:immersiveengineering:alloy>.removeAll();
 
+//Loom
+
+addLoom("loom/burlap_cloth", <item:immersiveengineering:hemp_fiber>, 16, <item:tfc:burlap_cloth>, 16, "tfc:block/burlap");
+
 //Metal Press
 
 <recipetype:immersiveengineering:metal_press>.removeByName("immersiveengineering:metalpress/rod_iron");
@@ -235,6 +242,83 @@ addHeatingSolid("heating/clinker_brick", <item:minecraft:bricks>, <item:immersiv
 <recipetype:immersiveengineering:metal_press>.removeByName("immersiveengineering:metalpress/rod_electrum");
 <recipetype:immersiveengineering:metal_press>.removeByName("immersiveengineering:metalpress/rod_lead");
 
+<recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/steel_block", vars.steel * 8, <item:tfc_ie_addon:mold_block>, 2400, <item:immersiveengineering:storage_steel> * 1);
+<recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/uranium_block", vars.uranium * 8, <item:tfc_ie_addon:mold_block>, 2400, <item:immersiveengineering:storage_uranium> * 1);
+
+
 //Smoker Recipes
 
 smoker.removeByName("immersiveengineering:smoking/clinker_brick");
+
+
+
+
+//Looped Recipes
+
+val excludedMetals = [] as string[];
+val excludedRods = [] as string[];
+
+for metal in Metal.values {
+
+    if (metal.modID() == "immersiveengineering" && !(metal.getName() in excludedMetals)) {
+
+        //Generates parts
+        if (metal.hasParts()) {
+
+            val recipePrefix = "metalpress/" + metal.getName() + "_";
+
+            addMetalPress(
+                recipePrefix + "double_ingot",
+                <tagmanager:items>.tag("forge:ingots/" + metal.getName()),
+                2,
+                BracketHandlers.getItem("tfc_ie_addon:metal/double_ingot/"+ metal.getName()),
+                1,
+                <item:tjfc:mold/double_ingot>
+            );
+
+            //addMetalPress(
+                //recipePrefix + "double_sheet",
+                //BracketHandlers.getItem("tfc:metal/sheet/"+ metal.getName()),
+                //2,
+                //BracketHandlers.getItem("tfc:metal/double_sheet/"+ metal.getName()),
+                //1,
+                //<item:tfc_ie_addon:mold_sheet>
+            //); tfc_ie did not added double sheets and rods for whatever fucking reason and must be added by tjfc mod.
+
+            //if (!(metal.getName() in excludedRods)) {
+                //addMetalPress(
+                    //recipePrefix + "rod",
+                    //<tagmanager:items>.tag("forge:ingots/" + metal.getName()),
+                    //1,
+                    //BracketHandlers.getItem("tfc:metal/rod/"+ metal.getName()),
+                    //2,
+                    //<item:immersiveengineering:mold_rod>
+                //);
+            //}
+
+            addMetalPress(
+                recipePrefix + "sheet",
+                <tagmanager:items>.tag("forge:ingots/" + metal.getName()),
+                2,
+                BracketHandlers.getItem("tfc_ie_addon:metal/sheet/"+ metal.getName()),
+                1,
+                <item:tfc_ie_addon:mold_sheet>
+            );
+        }
+
+        if (metal.hasOre()) {
+
+            <recipetype:immersiveengineering:arc_furnace>.addRecipe(("arcfurnace/" + metal.getName()), (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1, [], 100, 51200, [(BracketHandlers.getItem("immersiveengineering:ingot_" + metal.getName())) * 1]);
+
+            for ore in vars.metalMapToOre[metal] {
+
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_small_" + ore.getName(), (BracketHandlers.getItem("tfc_ie_addon:ore/small_" + ore.getName())) * 10, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_poor_" + ore.getName(), (BracketHandlers.getItem("tfc_ie_addon:ore/poor_" + ore.getName())) * 4, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_normal_" + ore.getName(), (BracketHandlers.getItem("tfc_ie_addon:ore/normal_" + ore.getName())) * 2, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 1);
+                <recipetype:immersiveengineering:metal_press>.addRecipe("metalpress/scrap_from_rich_" + ore.getName(), (BracketHandlers.getItem("tfc_ie_addon:ore/rich_" + ore.getName())) * 4, <item:tfc:metal/double_ingot/black_steel>, 2400, (BracketHandlers.getItem("tjfc:metal/scrap/" + metal.getName())) * 3);
+
+
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-#priority 100
+#priority 90
 
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.ingredient.IIngredient;
@@ -6,6 +6,7 @@ import crafttweaker.api.data.IData;
 import crafttweaker.api.fluid.IFluidStack;
 import crafttweaker.api.bracket.BracketHandlers;
 import crafttweaker.api.data.ListData;
+import crafttweaker.api.block.Block;
 
 public expand string[] {
     public implicit as IData {
@@ -14,180 +15,6 @@ public expand string[] {
         return list;
     }
 }
-
-public enum Metal {
-    ALUMINUM("immersiveengineering","aluminum", false, false, true),
-    BISMUTH("tfc","bismuth", true, false, true),
-    BISMUTH_BRONZE("tfc","bismuth_bronze", true, true, false),
-    BLACK_BRONZE("tfc","black_bronze", true, true, false),
-    BLACK_STEEL("tfc","black_steel", true, true, false),
-    BLUE_STEEL("tfc","blue_steel", true, true, false),
-    BRASS("tfc","brass", true, false, false),
-    BRONZE("tfc","bronze", true, true, false),
-    CAST_IRON("tfc","cast_iron", true, false, true),
-    CHROMIUM("firmalife","chromium", true, false, true),
-    CONSTANTAN("immersiveengineering", "constantan", true, false, false),
-    COPPER("tfc","copper", true, true, true),
-    GOLD("tfc","gold", true, false, true),
-    LEAD("immersiveengineering", "lead", true, false, true),
-    NICKEL("tfc","nickel", true, false, true),
-    PIG_IRON("tfc","pig_iron", false, false, false),
-    RED_STEEL("tfc","red_steel", true, true, false),
-    ROSE_GOLD("tfc","rose_gold", true, false, false),
-    SILVER("tfc","silver", true, false, true),
-    STAINLESS_STEEL("firmalife","stainless_steel", true, false, false),
-    STEEL("tfc","steel", true, true, false),
-    STERLING_SILVER("tfc","sterling_silver", true, false, false),
-    TIN("tfc","tin", true, false, true),
-    URANIUM("immersiveengineering", "uranium", false , false, true),
-    WROUGHT_IRON("tfc", "wrought_iron", true, true, false),
-    ZINC("tfc", "zinc", true, false, true);
-
-    val modID as string;
-    val metalName as string;
-    val parts as bool;
-    val tools as bool;
-    val ore as bool;
-
-    this(modID as string, metalName as string, parts as bool, tools as bool, ore as bool) {
-        this.modID = modID;
-        this.metalName = metalName;
-        this.parts = parts;
-        this.tools = tools;
-        this.ore = ore;
-    }
-
-    public modID() as string {
-        return modID;
-    }
-
-    public getName() as string {
-        return metalName;
-    }
-
-    public hasParts() as bool {
-        return parts;
-    }
-
-    public hasTools() as bool {
-        return tools;
-    }
-
-    public hasOre() as bool {
-        return ore;
-    }
-}
-
-public enum Ore {
-
-    CHROMITE("firmalife","chromite"),
-    NATIVE_COPPER("tfc","native_copper"),
-    NATIVE_GOLD("tfc","native_gold"),
-    HEMATITE("tfc","hematite"),
-    NATIVE_SILVER("tfc","native_silver"),
-    CASSITERITE("tfc","cassiterite"),
-    BISMUTHINITE("tfc","bismuthinite"),
-    GARNIERITE("tfc","garnierite"),
-    MALACHITE("tfc","malachite"),
-    MAGNETITE("tfc","magnetite"),
-    LIMONITE("tfc","limonite"),
-    SPHALERITE("tfc","sphalerite"),
-    TETRAHEDRITE("tfc","tetrahedrite"),
-    BAUXITE("tfc_ie_addon","bauxite"),
-    GALENA("tfc_ie_addon","galena"),
-    URANINITE("tfc_ie_addon","uraninite");
-
-    val modID as string;
-    val oreName as string;
-
-    this(modID as string, oreName as string) {
-        this.modID = modID;
-        this.oreName = oreName;
-    }
-
-    public modID() as string {
-        return modID;
-    }
-
-    public getName() as string {
-        return oreName;
-    }
-}
-
-public enum Gem {
-
-    AMETHYST("tfc","amethyst"),
-    DIAMOND("tfc","diamond"),
-    EMERALD("tfc","emerald"),
-    LAPIS_LAZULI("tfc","lapis_lazuli"),
-    OPAL("tfc","opal"),
-    PYRITE("tfc","pyrite"),
-    RUBY("tfc","ruby"),
-    SAPPHIRE("tfc","sapphire"),
-    TOPAZ("tfc","topaz");
-
-    val modID as string;
-    val itemName as string;
-
-    this(modID as string, itemName as string) {
-        this.modID = modID;
-        this.itemName = itemName;
-    }
-
-    public modID() as string {
-        return modID;
-    }
-
-    public getName() as string {
-        return itemName;
-    }
-}
-
-public enum Tool {
-    AXE("axe","head", 1, <item:tjfc:mold/axe>),
-    CHISEL("chisel","head", 1, <item:tjfc:mold/chisel>),
-    HAMMER("hammer","head", 1, <item:tjfc:mold/hammer>),
-    HOE("hoe","head", 1, <item:tjfc:mold/hoe>),
-    JAVELIN("javelin","head", 1, <item:tjfc:mold/javelin>),
-    KNIFE("knife","blade", 1, <item:tjfc:mold/knife>),
-    MACE("mace","head", 2, <item:tjfc:mold/mace>),
-    PICKAXE("pickaxe","head", 1, <item:tjfc:mold/pickaxe>),
-    PROPICK("propick","head", 1, <item:tjfc:mold/propick>),
-    SAW("saw","blade", 1, <item:tjfc:mold/saw>),
-    SCYTHE("scythe","blade", 1, <item:tjfc:mold/scythe>),
-    SHOVEL("shovel","head", 1, <item:tjfc:mold/shovel>),
-    SWORD("sword","blade", 2, <item:tjfc:mold/sword>);
-
-    val toolName as string;
-    val headType as string;
-    val metalAmount as int; //in ingots
-    val moldItem as IItemStack;
-
-    this(toolName as string, headType as string, metalAmount as int, moldItem as IItemStack) {
-        this.toolName = toolName;
-        this.headType = headType;
-        this.metalAmount = metalAmount;
-        this.moldItem = moldItem;
-    }
-
-    public getName() as string {
-        return toolName;
-    }
-
-    public getHeadType() as string {
-        return headType;
-    }
-
-    public getMetalAmount() as int {
-        return metalAmount;
-    }
-
-    public getMoldItem() as IItemStack {
-        return moldItem;
-    }
-}
-
-
 
 public class vars {
 
@@ -213,6 +40,7 @@ public class vars {
     public static val cast_iron = <tag:items:forge:ingots/cast_iron>;
     public static val tin = <tag:items:forge:ingots/tin>;
     public static val nickel = <tag:items:forge:ingots/nickel>;
+    public static val uranium = <tag:items:forge:ingots/uranium>;
 
     public static val metalMapToOre = {
         Metal.ALUMINUM : [Ore.BAUXITE],
@@ -253,6 +81,19 @@ public function addGlassworking(recipeName as string, inputItem as IIngredient, 
          "operations": operations,
          "batch": inputItem as IData,
          "result": resultItem as IData,
+    });
+}
+
+public function addLoom(recipeName as string, inputItem as IIngredient, inputAmount as int, resultItem as IItemStack, requiredSteps as int, progressTexture as string) as void {
+    <recipetype:tfc:loom>.addJsonRecipe(recipeName, {
+        "type": "tfc:loom",
+        "ingredient": {
+            "ingredient": inputItem as IData,
+            "count": inputAmount
+        },
+        "result": resultItem as IData,
+        "steps_required": requiredSteps,
+        "in_progress_texture": progressTexture
     });
 }
 

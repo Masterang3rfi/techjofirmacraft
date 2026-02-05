@@ -1,0 +1,5 @@
+Multiblock Change
+One Imposter Remains
+
+The multiblock of the <link;arc_furnace;Arc Furnace> has changed in the TFC-IE crossover mod: To create Arc Furnace you will need Fire Bricks from TerraFirmaCraft instead of Blast Bricks.
+<&arcfurnace_recipe>

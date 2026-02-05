@@ -1,0 +1,7 @@
+Chemical Ingredients
+6.022x10²³
+Not all materials in engineering are as straightforward as wood, stone and various metals. A basic understanding of chemical processes is essential to appreciate the breadth of materials available to you.
+<&fertilizer> §lSaltpeter§r is an alkali salt obtained by processing §2Sandstone§r in a <link;crusher;Crusher>. Saltpeter ore can also be found in the TFC World, which can now be processed in a crusher!
+It is used as a catalyst in the creation of <link;refinery;Biodiesel;diesel>, and can be used to craft Fertilizer as shown above.
+<&gunpowder_recipes> §lSulfur§r is an ore found commonly in <link;minerals;Mineral Deposits>. Its powder form can be obtained by <link;crusher;crushing> §2Sulfur Ore§r or occasionally from §2Quartz Blocks§r.
+<br>Mixing Nitrate, Sulfur and Charcoal allows for the creation of gunpowder, a far more scientific process than looting it from slain monsters.

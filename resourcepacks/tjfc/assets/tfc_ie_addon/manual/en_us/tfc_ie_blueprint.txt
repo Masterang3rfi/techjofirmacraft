@@ -1,0 +1,5 @@
+Blueprint Recipes
+Easier than before! (Perhaps?..)
+Since the TerraFirmaCraft world does not provide village generation, you won't be able to meet Villagers that could sell you some Blueprints.
+So, you can now craft them on the crafting table! While it may be a little difficult, it is sure worth it!
+<&blueprint_recipes>

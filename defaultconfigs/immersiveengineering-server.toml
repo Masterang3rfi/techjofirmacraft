@@ -192,7 +192,7 @@
 	[machines.garden_cloche]
 		#The Flux per tick the cloche consumes to grow plants
 		#Range: > 1
-		consumption = 8
+		consumption = 16384
 		#The amount of ticks one dose of fertilizer lasts in the cloche
 		#Range: > 1
 		fertilizer = 6000
