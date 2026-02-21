@@ -39,6 +39,10 @@ addAnvilRecipeThreeRule("anvil/revolver_hammer", <item:tfc:metal/rod/steel>, <it
 <recipetype:immersiveengineering:blast_furnace>.removeByName("immersiveengineering:blastfurnace/steel_block");
 <recipetype:immersiveengineering:blast_furnace>.removeByName("immersiveengineering:blastfurnace/steel");
 
+//Cloche
+
+<recipetype:immersiveengineering:cloche>.removeByModid("immersiveengineering");
+
 
 //Coke Oven
 
@@ -58,9 +62,6 @@ craftingTable.removeByName("immersiveengineering:crafting/shield");
 craftingTable.removeByName("immersiveengineering:crafting/rs_engineering");
 craftingTable.removeByName("immersiveengineering:crafting/heavy_engineering");
 craftingTable.removeByName("immersiveengineering:crafting/light_engineering");
-craftingTable.removeByName("immersiveengineering:crafting/capacitor_lv");
-craftingTable.removeByName("immersiveengineering:crafting/capacitor_mv");
-craftingTable.removeByName("immersiveengineering:crafting/capacitor_hv");
 craftingTable.removeByName("immersiveengineering:crafting/redstone_acid");
 craftingTable.removeByName("immersiveengineering:crafting/stairs_clinker_brick");
 craftingTable.removeByName("immersiveengineering:crafting/gunpart_hammer");
@@ -125,21 +126,6 @@ craftingTable.addShaped("crafting/light_engineering", <item:immersiveengineering
     [vars.iron_plate, <item:immersiveengineering:component_iron>, vars.iron_plate],
     [<tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>, <tag:items:forge:ingots/copper>],
     [vars.iron_plate, <item:immersiveengineering:component_iron>, vars.iron_plate]]);
-
-craftingTable.addShaped("crafting/capacitor_lv", <item:immersiveengineering:capacitor_lv>, [
-    [vars.iron_ingot, vars.iron_ingot, vars.iron_ingot],
-    [<tag:items:forge:ingots/copper>, <tag:items:forge:plates/lead>, <tag:items:forge:ingots/copper>],
-    [<tag:items:forge:treated_wood>, vars.redstone_acid, <tag:items:forge:treated_wood>]]);
-
-craftingTable.addShaped("crafting/capacitor_mv", <item:immersiveengineering:capacitor_mv>, [
-    [vars.iron_ingot, vars.iron_ingot, vars.iron_ingot],
-    [<tag:items:forge:ingots/electrum>, <tag:items:forge:plates/nickel>, <tag:items:forge:ingots/electrum>],
-    [<tag:items:forge:treated_wood>, vars.redstone_acid, <tag:items:forge:treated_wood>]]);
-
-craftingTable.addShaped("crafting/capacitor_hv", <item:immersiveengineering:capacitor_hv>, [
-    [vars.steel_ingot, vars.steel_ingot, vars.steel_ingot],
-    [<tag:items:forge:ingots/hop_graphite>, <tag:items:forge:plates/aluminum>, <tag:items:forge:ingots/hop_graphite>],
-    [<tag:items:forge:treated_wood>, vars.redstone_acid, <tag:items:forge:treated_wood>]]);
 
 craftingTable.addShaped("crafting/slag_brick", <item:immersiveengineering:slag_brick> * 4, [
     [<tag:items:forge:slag>, <tag:items:tfc:mortar>, <tag:items:forge:slag>],

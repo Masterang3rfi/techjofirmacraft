@@ -7,6 +7,7 @@ import crafttweaker.api.fluid.IFluidStack;
 import crafttweaker.api.bracket.BracketHandlers;
 import crafttweaker.api.data.ListData;
 import crafttweaker.api.block.Block;
+import crafttweaker.api.util.random.Percentaged;
 
 public expand string[] {
     public implicit as IData {
@@ -15,6 +16,15 @@ public expand string[] {
         return list;
     }
 }
+
+public expand Percentaged<IItemStack> {
+    public implicit as IData {
+        var itemStack = this.getData() as IData;
+        itemStack.merge({"chance" : this.getPercentage()});
+        return itemStack;
+    }
+}
+
 
 public class vars {
 
@@ -28,6 +38,7 @@ public class vars {
     public static val iron_ingot = <tag:items:forge:ingots/iron>;
     public static val iron_plate  = <tag:items:forge:plates/iron>;
     public static val constantan_plate = <tag:items:forge:plates/constantan>;
+    public static val copper_plate = <tag:items:forge:plates/copper>;
 
     public static val copper = <tag:items:forge:ingots/copper>;
     public static val gold = <tag:items:forge:ingots/gold>;
@@ -41,6 +52,8 @@ public class vars {
     public static val tin = <tag:items:forge:ingots/tin>;
     public static val nickel = <tag:items:forge:ingots/nickel>;
     public static val uranium = <tag:items:forge:ingots/uranium>;
+
+    public static val plantableDirt = <item:tfc:dirt/silt> | <item:tfc:dirt/loam> | <item:tfc:dirt/sandy_loam> | <item:tfc:dirt/silty_loam>;
 
     public static val metalMapToOre = {
         Metal.ALUMINUM : [Ore.BAUXITE],
@@ -162,7 +175,7 @@ public function addAnvilRecipeTwoRule(recipeName as string, inputItem as IItemSt
 }
 
 
-//IE Helpers
+//IE Helpers SHOULD NOT USE THESE. I found out too late that IE has 1.20 compatibility despite there not being an IE section in the 1.20 CT wiki.
 
 public function addBlastFurnace(recipeName as string, inputItem as IIngredient, inputAmount as int, outputItem as IItemStack, outputAmount as int) as void {
     <recipetype:immersiveengineering:blast_furnace>.addJsonRecipe(recipeName, {
@@ -222,4 +235,19 @@ public function addMetalPress(recipeName as string, inputItem as IIngredient, in
       });
 }
 
+//IT Helpers
 
+public function addDistiller(recipeName as string, inputFluid as string, inputAmount as int, outputFluid as IFluidStack, chancedOutput as Percentaged<IItemStack>) as void {
+    //Why oh why does it expect a tag and a tag only for inputs? It leads to horrible things like curdled milk turning into steam!
+    <recipetype:immersivetechnology:distiller>.addJsonRecipe(recipeName, {
+          "type": "immersivetechnology:distiller",
+          "energy": 10000,
+          "input": {
+            "amount": inputAmount,
+            "tag": inputFluid
+          },
+          "item_output": chancedOutput as IData,
+          "result": outputFluid as IData,
+          "time": 20
+        });
+}

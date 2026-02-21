@@ -13,6 +13,10 @@
 
 <recipetype:immersiveengineering:arc_furnace>.removeByModid("tfc_ie_addon");
 
+//Cloche
+
+<recipetype:immersiveengineering:cloche>.removeByModid("tfc_ie_addon");
+
 //Crafting Recipes
 
 craftingTable.removeByName("tfc_ie_addon:crafting/steel_sheet_to_plate");

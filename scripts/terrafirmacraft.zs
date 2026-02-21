@@ -23,6 +23,34 @@ addBlastFurnace("blastfurnace/pig_iron_from_cast_ingot", <tag:items:forge:ingots
 addBlastFurnace("blastfurnace/pig_iron_from_cast_scrap", <item:tjfc:metal/scrap/cast_iron>, 1, <item:tfc:metal/ingot/pig_iron>, 1);
 addBlastFurnace("blastfurnace/pig_iron_from_wrought_ingot", <tag:items:forge:ingots/wrought_iron>, 1, <item:tfc:metal/ingot/pig_iron>, 1);
 
+//Cloche
+
+
+//need to loop this later
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/barley", <item:tfc:seeds/barley>, vars.plantableDirt, 12000, [<item:tfc:food/barley>,<item:tfc:seeds/barley>], <block:tfc:crop/barley>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/oat", <item:tfc:seeds/oat>, vars.plantableDirt, 12000, [<item:tfc:food/oat>,<item:tfc:seeds/oat>], <block:tfc:crop/oat>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/rye", <item:tfc:seeds/rye>, vars.plantableDirt, 12000, [<item:tfc:food/rye>,<item:tfc:seeds/rye>], <block:tfc:crop/rye>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/maize", <item:tfc:seeds/maize>, vars.plantableDirt, 12000, [<item:tfc:food/maize>,<item:tfc:seeds/maize>], <block:tfc:crop/maize>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/wheat", <item:tfc:seeds/wheat>, vars.plantableDirt, 12000, [<item:tfc:food/wheat>,<item:tfc:seeds/wheat>], <block:tfc:crop/wheat>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/rice", <item:tfc:seeds/rice>, vars.plantableDirt, 12000, [<item:tfc:food/rice>,<item:tfc:seeds/rice>], <block:tfc:crop/rice>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/beet", <item:tfc:seeds/beet>, vars.plantableDirt, 12000, [<item:tfc:food/beet>,<item:tfc:seeds/beet>], <block:tfc:crop/beet>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/cabbage", <item:tfc:seeds/cabbage>, vars.plantableDirt, 12000, [<item:tfc:food/cabbage>,<item:tfc:seeds/cabbage>], <block:tfc:crop/cabbage>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/carrot", <item:tfc:seeds/carrot>, vars.plantableDirt, 12000, [<item:tfc:food/carrot>,<item:tfc:seeds/carrot>], <block:tfc:crop/carrot>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/garlic", <item:tfc:seeds/garlic>, vars.plantableDirt, 12000, [<item:tfc:food/garlic>,<item:tfc:seeds/garlic>], <block:tfc:crop/garlic>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/green_bean", <item:tfc:seeds/green_bean>, vars.plantableDirt, 12000, [<item:tfc:food/green_bean>,<item:tfc:seeds/green_bean>], <block:tfc:crop/green_bean>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/potato", <item:tfc:seeds/potato>, vars.plantableDirt, 12000, [<item:tfc:food/potato>,<item:tfc:seeds/potato>], <block:tfc:crop/potato>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/onion", <item:tfc:seeds/onion>, vars.plantableDirt, 12000, [<item:tfc:food/onion>,<item:tfc:seeds/onion>], <block:tfc:crop/onion>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/soybean", <item:tfc:seeds/soybean>, vars.plantableDirt, 12000, [<item:tfc:food/soybean>,<item:tfc:seeds/soybean>], <block:tfc:crop/soybean>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/squash", <item:tfc:seeds/squash>, vars.plantableDirt, 12000, [<item:tfc:food/squash>,<item:tfc:seeds/squash>], <block:tfc:crop/squash>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/sugarcane", <item:tfc:seeds/sugarcane>, vars.plantableDirt, 12000, [<item:tfc:food/sugarcane>,<item:tfc:seeds/sugarcane>], <block:tfc:crop/sugarcane>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/tomato", <item:tfc:seeds/tomato>, vars.plantableDirt, 12000, [<item:tfc:food/tomato>,<item:tfc:seeds/tomato>], <block:tfc:crop/tomato>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/jute", <item:tfc:seeds/jute>, vars.plantableDirt, 12000, [<item:tfc:jute>,<item:tfc:seeds/jute>], <block:tfc:crop/jute>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/papyrus", <item:tfc:seeds/papyrus>, vars.plantableDirt, 12000, [<item:tfc:papyrus>,<item:tfc:seeds/papyrus>], <block:tfc:crop/papyrus>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/pumpkin", <item:tfc:seeds/pumpkin>, vars.plantableDirt, 12000, [<item:tfc:pumpkin>,<item:tfc:seeds/pumpkin>], <block:tfc:crop/pumpkin>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/melon", <item:tfc:seeds/melon>, vars.plantableDirt, 12000, [<item:tfc:melon>,<item:tfc:seeds/melon>], <block:tfc:crop/melon>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/red_bell_pepper", <item:tfc:seeds/red_bell_pepper>, vars.plantableDirt, 12000, [<item:tfc:food/red_bell_pepper>,<item:tfc:seeds/red_bell_pepper>], <block:tfc:crop/red_bell_pepper>, "crop");
+<recipetype:immersiveengineering:cloche>.addRecipe("cloche/yellow_bell_pepper", <item:tfc:seeds/yellow_bell_pepper>, vars.plantableDirt, 12000, [<item:tfc:food/yellow_bell_pepper>,<item:tfc:seeds/yellow_bell_pepper>], <block:tfc:crop/yellow_bell_pepper>, "crop");
+
 //Crusher Recipes
 
 <recipetype:immersiveengineering:crusher>.addRecipe("crusher/graphite", <item:tfc:ore/graphite>, 3000, <item:tfc:powder/graphite> * 8);

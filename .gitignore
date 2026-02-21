@@ -3,6 +3,7 @@
 config/jei/world/*
 
 
+screenshots
 disabledmods
 jarmods
 logs
@@ -12,5 +13,7 @@ instance.json
 options.txt
 usercache.json
 usernamecache.json
+scripts/examples
+crash-reports
 
 patchouli_data.json

@@ -7,6 +7,7 @@
 
 craftingTable.removeByName("minecraft:stonecutter");
 craftingTable.removeByName("minecraft:piston");
+craftingTable.removeByName("minecraft:brewing_stand");
 
 craftingTable.addShaped("crafting/lead", <item:minecraft:lead> * 1, [
     [vars.air, <item:immersiveengineering:wirecoil_structure_rope>, <item:immersiveengineering:wirecoil_structure_rope>],

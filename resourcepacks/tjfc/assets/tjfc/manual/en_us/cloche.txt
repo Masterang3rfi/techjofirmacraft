@@ -1,3 +1,3 @@
-Cloche IF Requirements
+Cloche Changes
 It was a little busted...
-Unfortunately the garden cloche was just a §otiny§r bit busted with how cheap it was to grow plants at an incredibly rapid rate. This now means that the cloche now requires <config;i;machines.garden_cloche.consumption>IF/t to run. This might just put you into generational power debt, so make sure you have a good power generation setup!
+Unfortunately the garden cloche was just a §otiny§r bit busted with how cheap it was to grow plants at an incredibly rapid rate. This now means that the cloche now requires <config;i;machines.garden_cloche.consumption>IF/t to run. Additionally, it takes about half a minecraft day to grow a plant (can be improved with fertilizer). So don't neglect your traditional farming unless you have to use a cloche!
