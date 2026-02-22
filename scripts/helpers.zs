@@ -238,7 +238,7 @@ public function addMetalPress(recipeName as string, inputItem as IIngredient, in
 //IT Helpers
 
 public function addDistiller(recipeName as string, inputFluid as string, inputAmount as int, outputFluid as IFluidStack, chancedOutput as Percentaged<IItemStack>) as void {
-    //Why oh why does it expect a tag and a tag only for inputs? It leads to horrible things like curdled milk turning into steam!
+    //Why oh why do fluid inputs expect tag only for inputs? It leads to horrible things like curdled milk turning into steam!
     <recipetype:immersivetechnology:distiller>.addJsonRecipe(recipeName, {
           "type": "immersivetechnology:distiller",
           "energy": 10000,

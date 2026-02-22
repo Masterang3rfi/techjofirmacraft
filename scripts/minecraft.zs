@@ -1,4 +1,4 @@
-
+import crafttweaker.api.recipe.MirrorAxis;
 
 
 
@@ -8,11 +8,17 @@
 craftingTable.removeByName("minecraft:stonecutter");
 craftingTable.removeByName("minecraft:piston");
 craftingTable.removeByName("minecraft:brewing_stand");
+craftingTable.removeByName("minecraft:quartz_block");
 
 craftingTable.addShaped("crafting/lead", <item:minecraft:lead> * 1, [
     [vars.air, <item:immersiveengineering:wirecoil_structure_rope>, <item:immersiveengineering:wirecoil_structure_rope>],
     [vars.air, <item:immersiveengineering:wirecoil_structure_rope>, <item:immersiveengineering:wirecoil_structure_rope>],
     [<item:immersiveengineering:wirecoil_structure_rope>, vars.air, vars.air]]);
+
+craftingTable.addShapedMirrored("crafting/quartz_block", MirrorAxis.ALL,<item:minecraft:quartz_block>, [
+    [<tag:items:forge:gems/quartz>, <tag:items:forge:gems/quartz>],
+    [<tag:items:forge:gems/quartz>, <tag:items:forge:gems/quartz>]
+    ]);
 
 //Crusher Recipes
 
